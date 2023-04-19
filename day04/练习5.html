@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getBal2() {
+            let x = +prompt('请输入您的银行卡余额')
+            let y = +prompt('请输入您当月的食宿费用')
+            let z = +prompt('请输入您当月的生活费用')
+            let bal2
+            bal2 = x - y - z
+            return bal2
+        }
+        let num = getBal2()
+        document.write(`您的银行卡余额为${num}`)
+    </script>
+</body>
+
+</html>

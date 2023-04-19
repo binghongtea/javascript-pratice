@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getRandom(N, M) {
+            return Math.floor(Math.random() * (M - N + 1)) + N
+        }
+        function getRandomColor(flag = true) {
+            if (flag) {
+                let arr = ['0','1','2','3','4','5','6','7','8','9','a', 'b', 'c', 'd', 'e', 'f']
+                let re = '#' 
+                for (let i = 1; i <= 6; i++) {
+                    let random = getRandom(0, arr.length - 1)
+                    re += arr[random]
+                }
+                return re
+            } else {
+                let arr = []
+                for (let i = 1; i <= 3; i++) {
+                    let random = getRandom(0, 255)
+                    arr.push(random)
+                }
+                return `rgb(${arr[0]},${arr[1]},${arr[2]})`
+            }
+        }
+        let sixteen1 = getRandomColor(true)
+        let sixteen2 = getRandomColor()
+        let rgb = getRandomColor(false)
+        document.write(`${sixteen1}<br>`)
+        document.write(`${sixteen2}<br>`)
+        document.write(`${rgb}<br>`)   
+        console.log(`${sixteen1}<br>`)     
+        console.log(`${sixteen2}<br>`)     
+        console.log(`${rgb}<br>`)     
+    </script>
+</body>
+
+</html>

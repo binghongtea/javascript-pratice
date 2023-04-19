@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        while (true) {
+            let i = prompt(`请输入 + - * /  进行运算
+                或者按q退出
+        `)
+
+            if (i === 'q') {
+                break
+            }
+
+            let num1 = +prompt('请输入第一个数字')
+            let num2 = +prompt('请输入第二个数字')
+
+            if (i === '+') {
+                alert(`结果为${num1 + num2}`)
+            } else if (i === '-') {
+                alert(`结果为${num1 - num2}`)
+            } else if (i === '*') {
+                alert(`结果为${num1 * num2}`)
+            } else if (i === '/') {
+                alert(`结果为${num1 / num2}`)
+            }
+        }
+    </script>
+</body>
+
+</html>

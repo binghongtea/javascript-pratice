@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>成绩表</title>
+    <link rel="stylesheet" href="./style/score.css">
+</head>
+
+<body>
+    <!-- <div class="box1">
+        <table>
+            <thead>
+                <th>编号</th>
+                <th>科目</th>
+                <th>成绩</th>
+                <th>操作</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>语文</td>
+                    <td>46</td>
+                    <td>
+                        <a href="#">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>数学</td>
+                    <td>80</td>
+                    <td>
+                        <a href="#">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>英语</td>
+                    <td>100</td>
+                    <td>
+                        <a href="#">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <span>暂无数据</span>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4">
+                        <span>总分:226</span>
+                        <span>平均分:75.33</span>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div> -->
+
+
+    <div class="box1">
+        <table>
+            <thead>
+                <th>编号</th>
+                <th>科目</th>
+                <th>成绩</th>
+                <th>操作</th>
+            </thead>
+            <script>
+                let info = [
+                    { id: 1, class: '语文', score: 46, ope: '删除' },
+                    { id: 2, class: '数学', score: 80, ope: '删除' },
+                    { id: 3, class: '英语', score: 100, ope: '删除' }
+                ]
+                document.write(`<tbody>`)
+                let sum = 0
+                for (let i = 0; i < info.length; i++) {
+                    a = info[i].id
+                    b = info[i].class
+                    c = info[i].score
+                    d = info[i].ope
+                    sum += c
+                    document.write(`
+            <tr>
+                    <td>${a}</td>
+                    <td>${b}</td>
+                    <td>${c}</td>
+                    <td>
+                        <a href="#">${d}</a>
+                    </td>
+                </tr>
+            `)
+                }
+                document.write(`</tbody>`)
+
+                document
+                let ave = sum / info.length
+                document.write(`
+        <tfoot>
+            <tr class='first' >
+                    <td colspan="4", rowspan="1">
+                        <span>暂无数据</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <span>总分:${sum}</span>
+                        <span>平均分:${ave}</span>
+                    </td>
+                </tr>
+            </tfoot>
+        `)
+            </script>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+    transition: all .3s;
+}
+
+.w{
+    width: 525px;
+}
+
+body {
+    background-color: #000;
+}
+
+.box1 {
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+li {
+    margin-top: 10px;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+li:hover {
+    z-index: 999;
+}
+
+img {
+    transition: all 1s;
+}
+
+li:hover img{
+    transform: scale(1.3);
+}

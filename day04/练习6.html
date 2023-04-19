@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function handleData(arr, flag = true) {
+            if (flag) {
+                let sum = 0
+               for (let i = 0; i < arr.length; i++) {
+                sum += arr[i]
+               }
+               return sum
+            } else {
+                let sum = 0
+                let ave = 0
+                for (let i = 0; i < arr.length; i++) {
+                    sum += arr[i]
+                    ave = sum / arr.length
+                }
+                return ave
+            }
+        }
+        let num = handleData([10, 20, 24, 354], true)
+        let num1 = handleData([10, 20, 24, 354])
+        let num2 = handleData([10, 20, 24, 354], false)
+        document.write(`${num}<br>`)
+        document.write(`${num1}<br>`)
+        document.write(`${num2}<br>`)
+    </script>
+</body>
+</html>

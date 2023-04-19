@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* 
+        1.生成个随机数字
+        2.设定一个循环次数
+        3.判断
+         */
+        let random = Math.floor(Math.random() * 10) + 1
+        let flag = true
+        for (let i = 1; i <= 8; i++) {
+            let k = +prompt('请输入一个数字')
+            if (k > random) {
+                alert('您猜的数字偏大！')
+            } else if (k < random) {
+                alert('您猜的数字偏小！')
+            } else {
+                flag = false
+                alert('您猜对啦！！！')
+                break
+            }
+        }
+        if (flag) {
+            alert('抱歉，您的挑战失败！')
+        }
+
+    </script>
+</body>
+
+</html>

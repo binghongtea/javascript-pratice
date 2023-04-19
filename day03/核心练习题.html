@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 660px;
+            margin: 20px auto;
+            text-align: center;
+            background-size: cover;
+        }
+
+        .box div {
+            float: left;
+            margin: 10px 10px;
+        }
+
+        .box div img {
+            background-size: cover;
+            width: 100px;
+            height: 100px;
+            border: 2px solid blue;
+            border-radius: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        let num = +prompt('请输入1~20之间的数字,用于显示英雄')
+        document.write(`<div class="box">`)
+        for (let i = 1; i <= num; i++) {
+            document.write(`
+            <div class="box${i}">
+                <img src="./images/${i}.webp" alt="">
+            </div>
+            `)
+        }
+        document.write(`</div>`)
+    </script>
+</body>
+
+</html>

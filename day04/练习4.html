@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function changeNum(x, y) {
+            document.write(`执行函数前的x为${x}<br>`)
+            document.write(`执行函数前的y为${y}<br>`)
+            let temp
+            temp = x
+            x = y
+            y = temp
+            return [x, y]
+        }
+        let num1 = changeNum(1, 2)
+        document.write(`执行函数后的x为${num1[0]}<br>`)
+        document.write(`执行函数后的y为${num1[1]}<br>`)
+    </script>
+</body>
+</html>
